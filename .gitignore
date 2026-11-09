@@ -1,0 +1,61 @@
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+*.zip
+/data/
+/runs/
+/tmp/
+/output/
+/manifests/
+*.sqlite
+
+# Keep credentials, local prompts, and review correspondence on the workstation.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+/PROMPT_*.txt
+/manuscript/*Reviewer Comments.txt
+/manuscript/round1_submitted/
+
+# Manuscripts, revision packages, and document sources stay local.
+/manuscript/
+*.tex
+*.doc
+*.docx
+*.odt
+*.rtf
+*.pdf
+/scripts/package_manuscript.py
+/scripts/prepare_manuscript_dois.py
+/literature/manuscript_doi_audit*.json
+/reports/ALGORITHM_CODE_MAP.md
+/reports/ROUND2_REVISION_COMPLETION.md
+/reports/round2_final_validation.json
+/CONTRIBUTION_PLAN.md
+/reports/PUBLICATION_DECISION.md
+/reports/NOVELTY_GATE.md
+
+# Generated document build files.
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bak
+*.docx
+/manuscript/*.pdf
+/manuscript/docx_build/_eq_work/
+/manuscript/figures/equation*.png
+/reports/environment.json
+/reports/unit_test_results.txt
+
+# User preference applies regardless of letter case.
+*[cC][oO][dD][eE][xX]*

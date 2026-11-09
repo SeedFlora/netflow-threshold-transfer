@@ -1,0 +1,584 @@
+{
+  "provenance": {
+    "source": "G:\\network\\f7546561558c07c5_NFV3DATA-A11964_A11964.zip",
+    "expected_zip_sha256": "6d51554df43e324ba8d68fc31a02a83d860ba0a3a93d63320a4a6fc314c9cdfd",
+    "expected_csv_sha1": "2cba4879ead17c51e3268a01c06af41186cd90e4",
+    "zip_sha256": "6d51554df43e324ba8d68fc31a02a83d860ba0a3a93d63320a4a6fc314c9cdfd",
+    "manifest_csv_sha1": "2cba4879ead17c51e3268a01c06af41186cd90e4",
+    "csv_sha1": "2cba4879ead17c51e3268a01c06af41186cd90e4",
+    "csv_sha256": "4ebb97bd74412d566137d95a6fc3ffd8f374f1cf8cfe204d007848e7a668f9b5",
+    "csv_path": "G:\\network\\data\\raw\\NF-UNSW-NB15-v3.csv"
+  },
+  "rows": 2365424,
+  "columns": 55,
+  "column_audit": {
+    "FLOW_START_MILLISECONDS": {
+      "dtype": "int64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 1421927376907,
+      "max": 1424262564927,
+      "constant": false
+    },
+    "FLOW_END_MILLISECONDS": {
+      "dtype": "int64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 1421927414036,
+      "max": 1424262565011,
+      "constant": false
+    },
+    "IPV4_SRC_ADDR": {
+      "dtype": "<class 'str'>",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": "10.40.182.1",
+      "max": "59.166.0.9",
+      "constant": false
+    },
+    "L4_SRC_PORT": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 65535.0,
+      "constant": false
+    },
+    "IPV4_DST_ADDR": {
+      "dtype": "<class 'str'>",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": "10.40.182.255",
+      "max": "59.166.0.9",
+      "constant": false
+    },
+    "L4_DST_PORT": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 65535.0,
+      "constant": false
+    },
+    "PROTOCOL": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 255.0,
+      "constant": false
+    },
+    "L7_PROTO": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 421.0,
+      "constant": false
+    },
+    "IN_BYTES": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 1.0,
+      "max": 27020934.0,
+      "constant": false
+    },
+    "IN_PKTS": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 1.0,
+      "max": 20166.0,
+      "constant": false
+    },
+    "OUT_BYTES": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 14656752.0,
+      "constant": false
+    },
+    "OUT_PKTS": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 11024.0,
+      "constant": false
+    },
+    "TCP_FLAGS": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 31.0,
+      "constant": false
+    },
+    "CLIENT_TCP_FLAGS": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 31.0,
+      "constant": false
+    },
+    "SERVER_TCP_FLAGS": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 31.0,
+      "constant": false
+    },
+    "FLOW_DURATION_MILLISECONDS": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 120948.0,
+      "constant": false
+    },
+    "DURATION_IN": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 120948.0,
+      "constant": false
+    },
+    "DURATION_OUT": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 120922.0,
+      "constant": false
+    },
+    "MIN_TTL": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 255.0,
+      "constant": false
+    },
+    "MAX_TTL": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 255.0,
+      "constant": false
+    },
+    "LONGEST_FLOW_PKT": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 28.0,
+      "max": 1508.0,
+      "constant": false
+    },
+    "SHORTEST_FLOW_PKT": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 28.0,
+      "max": 1508.0,
+      "constant": false
+    },
+    "MIN_IP_PKT_LEN": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 680.0,
+      "constant": false
+    },
+    "MAX_IP_PKT_LEN": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 28.0,
+      "max": 1508.0,
+      "constant": false
+    },
+    "SRC_TO_DST_SECOND_BYTES": {
+      "dtype": "float64",
+      "missing": 63425,
+      "positive_inf": 59068,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 4412.0,
+      "constant": false
+    },
+    "DST_TO_SRC_SECOND_BYTES": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 122493,
+      "negative_inf": 0,
+      "min": 0.0014166535495041,
+      "max": 8712.0,
+      "constant": false
+    },
+    "RETRANSMITTED_IN_BYTES": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 13510379.0,
+      "constant": false
+    },
+    "RETRANSMITTED_IN_PKTS": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 10081.0,
+      "constant": false
+    },
+    "RETRANSMITTED_OUT_BYTES": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 7328208.0,
+      "constant": false
+    },
+    "RETRANSMITTED_OUT_PKTS": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 5508.0,
+      "constant": false
+    },
+    "SRC_TO_DST_AVG_THROUGHPUT": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 11.0,
+      "max": 36000000.0,
+      "constant": false
+    },
+    "DST_TO_SRC_AVG_THROUGHPUT": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 23530666.0,
+      "constant": false
+    },
+    "NUM_PKTS_UP_TO_128_BYTES": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 3840.0,
+      "constant": false
+    },
+    "NUM_PKTS_128_TO_256_BYTES": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 298.0,
+      "constant": false
+    },
+    "NUM_PKTS_256_TO_512_BYTES": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 2564.0,
+      "constant": false
+    },
+    "NUM_PKTS_512_TO_1024_BYTES": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 642.0,
+      "constant": false
+    },
+    "NUM_PKTS_1024_TO_1514_BYTES": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 17500.0,
+      "constant": false
+    },
+    "TCP_WIN_MAX_IN": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 65533.0,
+      "constant": false
+    },
+    "TCP_WIN_MAX_OUT": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 65531.0,
+      "constant": false
+    },
+    "ICMP_TYPE": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 65285.0,
+      "constant": false
+    },
+    "ICMP_IPV4_TYPE": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 255.0,
+      "constant": false
+    },
+    "DNS_QUERY_ID": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 65535.0,
+      "constant": false
+    },
+    "DNS_QUERY_TYPE": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 55937.0,
+      "constant": false
+    },
+    "DNS_TTL_ANSWER": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 4283358309.0,
+      "constant": false
+    },
+    "FTP_COMMAND_RET_CODE": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 501.0,
+      "constant": false
+    },
+    "SRC_TO_DST_IAT_MIN": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 60598.0,
+      "constant": false
+    },
+    "SRC_TO_DST_IAT_MAX": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 60598.0,
+      "constant": false
+    },
+    "SRC_TO_DST_IAT_AVG": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 30299.0,
+      "constant": false
+    },
+    "SRC_TO_DST_IAT_STDDEV": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 30299.0,
+      "constant": false
+    },
+    "DST_TO_SRC_IAT_MIN": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 1490.0,
+      "constant": false
+    },
+    "DST_TO_SRC_IAT_MAX": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 60598.0,
+      "constant": false
+    },
+    "DST_TO_SRC_IAT_AVG": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 20199.0,
+      "constant": false
+    },
+    "DST_TO_SRC_IAT_STDDEV": {
+      "dtype": "float64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0.0,
+      "max": 28566.0,
+      "constant": false
+    },
+    "Label": {
+      "dtype": "int64",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": 0,
+      "max": 1,
+      "constant": false
+    },
+    "Attack": {
+      "dtype": "<class 'str'>",
+      "missing": 0,
+      "positive_inf": 0,
+      "negative_inf": 0,
+      "min": "Analysis",
+      "max": "Worms",
+      "constant": false
+    }
+  },
+  "labels": {
+    "0": 2237731,
+    "1": 127693
+  },
+  "attacks": {
+    "Benign": 2237731,
+    "Exploits": 42748,
+    "Fuzzers": 33816,
+    "Generic": 19651,
+    "Reconnaissance": 17074,
+    "Backdoor": 4659,
+    "DoS": 5980,
+    "Shellcode": 2381,
+    "Analysis": 1226,
+    "Worms": 158
+  },
+  "dates_utc": {
+    "2015-01-22": {
+      "rows": 1095574,
+      "attack": 17462
+    },
+    "2015-01-23": {
+      "rows": 39778,
+      "attack": 0
+    },
+    "2015-02-18": {
+      "rows": 1230072,
+      "attack": 110231
+    }
+  },
+  "capture_counts": {
+    "B": 1230072,
+    "A": 1135352
+  },
+  "timestamps": {
+    "unit": "epoch milliseconds",
+    "interpretation": "UTC for audit; original capture timezone unknown",
+    "storage": "int64",
+    "adjacent_time_inversions_in_csv": 335443,
+    "invalid_intervals": 0,
+    "start_min_ms": 1421927376907,
+    "start_max_ms": 1424262564927
+  },
+  "duplicates": {
+    "exact_record_extra_rows": 14815,
+    "event_extra_rows": 14815,
+    "feature_vector_extra_rows_F1": 230815,
+    "conflicting_event_ids": 0,
+    "conflicting_event_rows": 0,
+    "definition": "event = every original field except Label/Attack; exact record includes labels; feature vector uses only F1 predictors",
+    "rule": "retain smallest original row_id for repeated events; exclude all conflicting event labels; identical behavioral feature vectors are retained"
+  },
+  "label_mapping_invalid_rows": 0,
+  "integrity_exclusions": {
+    "duplicate_event": 14815
+  },
+  "rows_after_integrity_exclusions": 2350609,
+  "sessions": {
+    "count": 1884756,
+    "max_rows": 1206,
+    "median_rows": 1.0,
+    "idle_seconds": 60,
+    "definition": "Bidirectional endpoint+port+protocol with start <= running maximum prior end + 60 seconds; heuristic grouping, not true PCAP sessions."
+  },
+  "hashing": {
+    "dataset": "SHA256 and BagIt SHA1 verified",
+    "row_id": "zero-based int64 original CSV position; identity is (dataset CSV SHA256, row_id)",
+    "event_group": "pandas stable uint64 hash with fixed key nidslab-2026-key; noncryptographic, collision probability not zero"
+  },
+  "prior_label_access": "Initial user descriptive audit already inspected labels; this is not an entirely unseen-label dataset.",
+  "cache": "Single Parquet file with 100,000-row compressed row groups; all CSV reads and cache writes chunked; only audit/session metadata collected in RAM.",
+  "processed_sha256": "ed210f795c4143dd4c2d1ed92ca811ee95e57e963583f793abd765c03c9f5931",
+  "processed_path": "G:\\network\\data\\processed\\dataset.parquet"
+}

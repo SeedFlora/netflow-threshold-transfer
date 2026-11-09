@@ -1,0 +1,762 @@
+{
+  "analysis": "Post-hoc descriptive frozen-score audit; no retraining, threshold fitting or tuning.",
+  "protocol": "P_capture",
+  "model": "xgboost",
+  "feature_set": "F1",
+  "seeds": [
+    42,
+    2026,
+    3407
+  ],
+  "alpha": 0.001,
+  "band_definition": "tau_selected < score <= 0.5 on target flows",
+  "rate_units": "probabilities, not percentages; multiply by 100 for percentage or percentage-point reporting",
+  "pooling_note": "Pooled counts repeat the same target flows across three fitted models; these are model-flow decisions, not independent or unique flows. Pooled ratios are ratios of count sums, not means of seed ratios.",
+  "support_note": "TCP+UDP is a deliberately restricted post-hoc two-stratum subset. Other also has source support; ICMP alone is absent from benign source calibration. Standardized FPR changes the weighting estimand and is not a deployed alarm rate.",
+  "reference_note": "Both allocation conventions are exact. Source-rate composition/target-weight within allocation assigns the interaction to within; target-rate composition/source-weight within assigns it to composition. Neither is causal.",
+  "crosscheck_metrics_sha256": "d9e6bc1ce7dd92554252889dfc2770b3ddfcaa3f705ca8eb395161b53b56d221",
+  "analysis_script_sha256": "d44223a6aac0a1b55eae2155a002d98e03a484fa3168e63ff15d57c4a1172c82",
+  "inputs": [
+    {
+      "seed": 42,
+      "run_id": "main_P_capture_xgboost_F1_42_dca626e4a7",
+      "unchanged_sha256": {
+        "runs\\main_P_capture_xgboost_F1_42_dca626e4a7\\predictions.parquet": "dee9cbc47a6c772dfecb8f11090e4b1dd97fa25228a3cee10f19f8285953037e",
+        "runs\\main_P_capture_xgboost_F1_42_dca626e4a7\\thresholds.json": "ae94a541438a44b7c135c99883e420d5868528025e07f61abd2b618fd00dd1f7",
+        "runs\\main_P_capture_xgboost_F1_42_dca626e4a7\\decomposition.csv": "cfbf8c62e4ed5c29bbfd26aef9c88bce89295d45d0415249fd1e213a83cbeb75"
+      }
+    },
+    {
+      "seed": 2026,
+      "run_id": "main_P_capture_xgboost_F1_2026_dca626e4a7",
+      "unchanged_sha256": {
+        "runs\\main_P_capture_xgboost_F1_2026_dca626e4a7\\predictions.parquet": "c150307637c03f106f80459182905ca0ed340576b18d6d83b557457d00a050f0",
+        "runs\\main_P_capture_xgboost_F1_2026_dca626e4a7\\thresholds.json": "125d50d7cb7c18c085ab666b3c11dc302ee8f9387f46614e939d0beac31873ef",
+        "runs\\main_P_capture_xgboost_F1_2026_dca626e4a7\\decomposition.csv": "fd1567f36e5378d269577e06f72daff80d1455facd455b343e79c5faffb993e4"
+      }
+    },
+    {
+      "seed": 3407,
+      "run_id": "main_P_capture_xgboost_F1_3407_dca626e4a7",
+      "unchanged_sha256": {
+        "runs\\main_P_capture_xgboost_F1_3407_dca626e4a7\\predictions.parquet": "580c98e09d44c12be7c1217df7fb100d00c30185b9a9d458e9767c6f45c81e0a",
+        "runs\\main_P_capture_xgboost_F1_3407_dca626e4a7\\thresholds.json": "a2eb8063418538241b43e4fc41d423a178ac1d32bd2f0e9db1a6566c5a465043",
+        "runs\\main_P_capture_xgboost_F1_3407_dca626e4a7\\decomposition.csv": "92273efcf8765ec1647745cd409db31d930349be20024764bfe0db05adb8dd79"
+      }
+    }
+  ],
+  "bands": [
+    {
+      "record_type": "score_band",
+      "row_kind": "seed",
+      "seed": 42,
+      "rule": "T1_alpha_0.001",
+      "lower_threshold": 1.6912283172132447e-05,
+      "upper_threshold": 0.5,
+      "additional_fp": 12589,
+      "recovered_attacks": 62,
+      "additional_fp_per_recovered_attack": 203.0483870967742,
+      "udp_share_additional_fp": 0.9253316387322266,
+      "additional_fp_tcp": 49,
+      "additional_fp_udp": 11649,
+      "additional_fp_icmp": 255,
+      "additional_fp_other": 636,
+      "recovered_attack_families": {
+        "Backdoor": 2,
+        "DoS": 12,
+        "Exploits": 34,
+        "Fuzzers": 1,
+        "Generic": 11,
+        "Reconnaissance": 2
+      },
+      "t0_fp": 279,
+      "t0_tp": 110157,
+      "selected_fp": 12868,
+      "selected_tp": 110219
+    },
+    {
+      "record_type": "score_band",
+      "row_kind": "seed",
+      "seed": 42,
+      "rule": "T2_alpha_0.001",
+      "lower_threshold": 1.6912283172132447e-05,
+      "upper_threshold": 0.5,
+      "additional_fp": 12589,
+      "recovered_attacks": 62,
+      "additional_fp_per_recovered_attack": 203.0483870967742,
+      "udp_share_additional_fp": 0.9253316387322266,
+      "additional_fp_tcp": 49,
+      "additional_fp_udp": 11649,
+      "additional_fp_icmp": 255,
+      "additional_fp_other": 636,
+      "recovered_attack_families": {
+        "Backdoor": 2,
+        "DoS": 12,
+        "Exploits": 34,
+        "Fuzzers": 1,
+        "Generic": 11,
+        "Reconnaissance": 2
+      },
+      "t0_fp": 279,
+      "t0_tp": 110157,
+      "selected_fp": 12868,
+      "selected_tp": 110219
+    },
+    {
+      "record_type": "score_band",
+      "row_kind": "seed",
+      "seed": 2026,
+      "rule": "T1_alpha_0.001",
+      "lower_threshold": 3.064562406507321e-05,
+      "upper_threshold": 0.5,
+      "additional_fp": 12533,
+      "recovered_attacks": 65,
+      "additional_fp_per_recovered_attack": 192.8153846153846,
+      "udp_share_additional_fp": 0.9190138035586053,
+      "additional_fp_tcp": 360,
+      "additional_fp_udp": 11518,
+      "additional_fp_icmp": 19,
+      "additional_fp_other": 636,
+      "recovered_attack_families": {
+        "Backdoor": 4,
+        "DoS": 11,
+        "Exploits": 32,
+        "Generic": 16,
+        "Reconnaissance": 2
+      },
+      "t0_fp": 582,
+      "t0_tp": 110154,
+      "selected_fp": 13115,
+      "selected_tp": 110219
+    },
+    {
+      "record_type": "score_band",
+      "row_kind": "seed",
+      "seed": 2026,
+      "rule": "T2_alpha_0.001",
+      "lower_threshold": 3.437568375375122e-05,
+      "upper_threshold": 0.5,
+      "additional_fp": 12402,
+      "recovered_attacks": 65,
+      "additional_fp_per_recovered_attack": 190.8,
+      "udp_share_additional_fp": 0.9287211740041929,
+      "additional_fp_tcp": 229,
+      "additional_fp_udp": 11518,
+      "additional_fp_icmp": 19,
+      "additional_fp_other": 636,
+      "recovered_attack_families": {
+        "Backdoor": 4,
+        "DoS": 11,
+        "Exploits": 32,
+        "Generic": 16,
+        "Reconnaissance": 2
+      },
+      "t0_fp": 582,
+      "t0_tp": 110154,
+      "selected_fp": 12984,
+      "selected_tp": 110219
+    },
+    {
+      "record_type": "score_band",
+      "row_kind": "seed",
+      "seed": 3407,
+      "rule": "T1_alpha_0.001",
+      "lower_threshold": 2.3218943169922568e-05,
+      "upper_threshold": 0.5,
+      "additional_fp": 12287,
+      "recovered_attacks": 83,
+      "additional_fp_per_recovered_attack": 148.03614457831324,
+      "udp_share_additional_fp": 0.9427850573777163,
+      "additional_fp_tcp": 41,
+      "additional_fp_udp": 11584,
+      "additional_fp_icmp": 26,
+      "additional_fp_other": 636,
+      "recovered_attack_families": {
+        "Backdoor": 8,
+        "DoS": 12,
+        "Exploits": 20,
+        "Fuzzers": 23,
+        "Generic": 16,
+        "Reconnaissance": 4
+      },
+      "t0_fp": 577,
+      "t0_tp": 110135,
+      "selected_fp": 12864,
+      "selected_tp": 110218
+    },
+    {
+      "record_type": "score_band",
+      "row_kind": "seed",
+      "seed": 3407,
+      "rule": "T2_alpha_0.001",
+      "lower_threshold": 2.3218943169922568e-05,
+      "upper_threshold": 0.5,
+      "additional_fp": 12287,
+      "recovered_attacks": 83,
+      "additional_fp_per_recovered_attack": 148.03614457831324,
+      "udp_share_additional_fp": 0.9427850573777163,
+      "additional_fp_tcp": 41,
+      "additional_fp_udp": 11584,
+      "additional_fp_icmp": 26,
+      "additional_fp_other": 636,
+      "recovered_attack_families": {
+        "Backdoor": 8,
+        "DoS": 12,
+        "Exploits": 20,
+        "Fuzzers": 23,
+        "Generic": 16,
+        "Reconnaissance": 4
+      },
+      "t0_fp": 577,
+      "t0_tp": 110135,
+      "selected_fp": 12864,
+      "selected_tp": 110218
+    }
+  ],
+  "band_summary": {
+    "T1_alpha_0.001": {
+      "mean_and_sample_sd": {
+        "additional_fp": {
+          "mean": 12469.666666666666,
+          "sample_sd": 160.65283481262736
+        },
+        "recovered_attacks": {
+          "mean": 70.0,
+          "sample_sd": 11.357816691600547
+        },
+        "additional_fp_tcp": {
+          "mean": 150.0,
+          "sample_sd": 181.90931806809678
+        },
+        "additional_fp_udp": {
+          "mean": 11583.666666666666,
+          "sample_sd": 65.5006361292265
+        },
+        "additional_fp_icmp": {
+          "mean": 100.0,
+          "sample_sd": 134.27955912945202
+        },
+        "additional_fp_other": {
+          "mean": 636.0,
+          "sample_sd": 0.0
+        }
+      },
+      "pooled_model_flow_decisions": {
+        "additional_fp": 37409,
+        "recovered_attacks": 210,
+        "additional_fp_tcp": 450,
+        "additional_fp_udp": 34751,
+        "additional_fp_icmp": 300,
+        "additional_fp_other": 1908,
+        "additional_fp_per_recovered_attack": 178.13809523809525,
+        "udp_share_additional_fp": 0.9289475794594884
+      }
+    },
+    "T2_alpha_0.001": {
+      "mean_and_sample_sd": {
+        "additional_fp": {
+          "mean": 12426.0,
+          "sample_sd": 152.42375143001829
+        },
+        "recovered_attacks": {
+          "mean": 70.0,
+          "sample_sd": 11.357816691600547
+        },
+        "additional_fp_tcp": {
+          "mean": 106.33333333333333,
+          "sample_sd": 106.3077294148141
+        },
+        "additional_fp_udp": {
+          "mean": 11583.666666666666,
+          "sample_sd": 65.5006361292265
+        },
+        "additional_fp_icmp": {
+          "mean": 100.0,
+          "sample_sd": 134.27955912945202
+        },
+        "additional_fp_other": {
+          "mean": 636.0,
+          "sample_sd": 0.0
+        }
+      },
+      "pooled_model_flow_decisions": {
+        "additional_fp": 37278,
+        "recovered_attacks": 210,
+        "additional_fp_tcp": 319,
+        "additional_fp_udp": 34751,
+        "additional_fp_icmp": 300,
+        "additional_fp_other": 1908,
+        "additional_fp_per_recovered_attack": 177.5142857142857,
+        "udp_share_additional_fp": 0.9322120285423038
+      }
+    }
+  },
+  "reference_sensitivity": [
+    {
+      "record_type": "reference_sensitivity",
+      "row_kind": "seed",
+      "seed": 42,
+      "rule": "T0",
+      "source_fpr": 0.0,
+      "target_fpr": 0.00025169578910238426,
+      "delta_fpr": 0.00025169578910238426,
+      "composition_source_rates": 0.0,
+      "within_target_weights": 0.0002516957891023703,
+      "composition_target_rates": 1.2312504137166122e-05,
+      "within_source_weights": 0.00023938328496520418,
+      "unsupported_target": 0.0,
+      "within_target_weights_share_delta": 0.9999999999999444,
+      "within_source_weights_share_delta": 0.9510818032312347,
+      "source_standardized_target_fpr_all_source_supported": 0.00023938328496520418,
+      "tcp_udp_source_n_benign": 337629,
+      "tcp_udp_target_n_benign": 1107590,
+      "tcp_udp_source_fp": 0,
+      "tcp_udp_target_fp": 279,
+      "tcp_udp_source_fpr": 0.0,
+      "tcp_udp_target_fpr": 0.0002518982656036981,
+      "tcp_udp_source_standardized_target_fpr": 0.00023950523516798303
+    },
+    {
+      "record_type": "reference_sensitivity",
+      "row_kind": "seed",
+      "seed": 42,
+      "rule": "T1_alpha_0.001",
+      "source_fpr": 0.0007489616667801457,
+      "target_fpr": 0.011608678903833264,
+      "delta_fpr": 0.010859717237053118,
+      "composition_source_rates": 7.135710789446337e-05,
+      "within_target_weights": 0.010558315590731724,
+      "composition_target_rates": 0.0007056452828785269,
+      "within_source_weights": 0.009924027415747662,
+      "unsupported_target": 0.00023004453842691034,
+      "within_target_weights_share_delta": 0.9722459029326272,
+      "within_source_weights_share_delta": 0.9138384728735935,
+      "source_standardized_target_fpr_all_source_supported": 0.010672989082527737,
+      "tcp_udp_source_n_benign": 337629,
+      "tcp_udp_target_n_benign": 1107590,
+      "tcp_udp_source_fp": 81,
+      "tcp_udp_target_fp": 11977,
+      "tcp_udp_source_fpr": 0.00023990830171578863,
+      "tcp_udp_target_fpr": 0.010813568197618252,
+      "tcp_udp_source_standardized_target_fpr": 0.010168991363499497
+    },
+    {
+      "record_type": "reference_sensitivity",
+      "row_kind": "seed",
+      "seed": 42,
+      "rule": "T2_alpha_0.001",
+      "source_fpr": 0.0007489616667801457,
+      "target_fpr": 0.011608678903833264,
+      "delta_fpr": 0.010859717237053118,
+      "composition_source_rates": 7.135710789446337e-05,
+      "within_target_weights": 0.010558315590731724,
+      "composition_target_rates": 0.0007056452828785269,
+      "within_source_weights": 0.009924027415747662,
+      "unsupported_target": 0.00023004453842691034,
+      "within_target_weights_share_delta": 0.9722459029326272,
+      "within_source_weights_share_delta": 0.9138384728735935,
+      "source_standardized_target_fpr_all_source_supported": 0.010672989082527737,
+      "tcp_udp_source_n_benign": 337629,
+      "tcp_udp_target_n_benign": 1107590,
+      "tcp_udp_source_fp": 81,
+      "tcp_udp_target_fp": 11977,
+      "tcp_udp_source_fpr": 0.00023990830171578863,
+      "tcp_udp_target_fpr": 0.010813568197618252,
+      "tcp_udp_source_standardized_target_fpr": 0.010168991363499497
+    },
+    {
+      "record_type": "reference_sensitivity",
+      "row_kind": "seed",
+      "seed": 2026,
+      "rule": "T0",
+      "source_fpr": 0.0,
+      "target_fpr": 0.0005250428288802424,
+      "delta_fpr": 0.0005250428288802424,
+      "composition_source_rates": 0.0,
+      "within_target_weights": 0.000312138863904731,
+      "composition_target_rates": 1.564984543013566e-05,
+      "within_source_weights": 0.0002964890184745953,
+      "unsupported_target": 0.0002129039649754935,
+      "within_target_weights_share_delta": 0.5945017182130243,
+      "within_source_weights_share_delta": 0.5646949204256665,
+      "source_standardized_target_fpr_all_source_supported": 0.0002964890184745953,
+      "tcp_udp_source_n_benign": 337629,
+      "tcp_udp_target_n_benign": 1107590,
+      "tcp_udp_source_fp": 0,
+      "tcp_udp_target_fp": 346,
+      "tcp_udp_source_fpr": 0.0,
+      "tcp_udp_target_fpr": 0.0003123899637952672,
+      "tcp_udp_source_standardized_target_fpr": 0.00029664006033171557
+    },
+    {
+      "record_type": "reference_sensitivity",
+      "row_kind": "seed",
+      "seed": 2026,
+      "rule": "T1_alpha_0.001",
+      "source_fpr": 0.000994668458648731,
+      "target_fpr": 0.011831506358701683,
+      "delta_fpr": 0.010836837900052953,
+      "composition_source_rates": 6.684325301842016e-05,
+      "within_target_weights": 0.010539950108607648,
+      "composition_target_rates": 0.0006966519728383916,
+      "within_source_weights": 0.009910141388787676,
+      "unsupported_target": 0.00023004453842691034,
+      "within_target_weights_share_delta": 0.9726038357144888,
+      "within_source_weights_share_delta": 0.9144864470787417,
+      "source_standardized_target_fpr_all_source_supported": 0.010904809847436274,
+      "tcp_udp_source_n_benign": 337629,
+      "tcp_udp_target_n_benign": 1107590,
+      "tcp_udp_source_fp": 164,
+      "tcp_udp_target_fp": 12224,
+      "tcp_udp_source_fpr": 0.0004857402652023375,
+      "tcp_udp_target_fpr": 0.011036574905876723,
+      "tcp_udp_source_standardized_target_fpr": 0.010400930225999071
+    },
+    {
+      "record_type": "reference_sensitivity",
+      "row_kind": "seed",
+      "seed": 2026,
+      "rule": "T2_alpha_0.001",
+      "source_fpr": 0.0008880968380792242,
+      "target_fpr": 0.011713326615431388,
+      "delta_fpr": 0.010825229777352164,
+      "composition_source_rates": 6.880106959116159e-05,
+      "within_target_weights": 0.010526384169334088,
+      "composition_target_rates": 0.0006988636719746177,
+      "within_source_weights": 0.009896321566950632,
+      "unsupported_target": 0.00023004453842691034,
+      "within_target_weights_share_delta": 0.9723936014140503,
+      "within_source_weights_share_delta": 0.9141904394172831,
+      "source_standardized_target_fpr_all_source_supported": 0.010784418405029762,
+      "tcp_udp_source_n_benign": 337629,
+      "tcp_udp_target_n_benign": 1107590,
+      "tcp_udp_source_fp": 128,
+      "tcp_udp_target_fp": 12093,
+      "tcp_udp_source_fpr": 0.00037911435332865366,
+      "tcp_udp_target_fpr": 0.010918300092994701,
+      "tcp_udp_source_standardized_target_fpr": 0.010280477451988656
+    },
+    {
+      "record_type": "reference_sensitivity",
+      "row_kind": "seed",
+      "seed": 3407,
+      "rule": "T0",
+      "source_fpr": 0.0,
+      "target_fpr": 0.0005205321516561853,
+      "delta_fpr": 0.0005205321516561853,
+      "composition_source_rates": 0.0,
+      "within_target_weights": 0.0003139431347943496,
+      "composition_target_rates": 1.5757936671120246e-05,
+      "within_source_weights": 0.0002981851981232293,
+      "unsupported_target": 0.0002065890168618136,
+      "within_target_weights_share_delta": 0.6031195840554167,
+      "within_source_weights_share_delta": 0.5728468398627996,
+      "source_standardized_target_fpr_all_source_supported": 0.0002981851981232293,
+      "tcp_udp_source_n_benign": 337629,
+      "tcp_udp_target_n_benign": 1107590,
+      "tcp_udp_source_fp": 0,
+      "tcp_udp_target_fp": 348,
+      "tcp_udp_source_fpr": 0.0,
+      "tcp_udp_target_fpr": 0.0003141956861293439,
+      "tcp_udp_source_standardized_target_fpr": 0.0002983371040734801
+    },
+    {
+      "record_type": "reference_sensitivity",
+      "row_kind": "seed",
+      "seed": 3407,
+      "rule": "T1_alpha_0.001",
+      "source_fpr": 0.0007341600528121586,
+      "target_fpr": 0.011605070362054017,
+      "delta_fpr": 0.010870910309241859,
+      "composition_source_rates": 7.065689009926191e-05,
+      "within_target_weights": 0.01057020888071576,
+      "composition_target_rates": 0.0007057128156765792,
+      "within_source_weights": 0.009935152955138441,
+      "unsupported_target": 0.00023004453842691034,
+      "within_target_weights_share_delta": 0.9723388915948963,
+      "within_source_weights_share_delta": 0.9139209755683582,
+      "source_standardized_target_fpr_all_source_supported": 0.010669313007950461,
+      "tcp_udp_source_n_benign": 337629,
+      "tcp_udp_target_n_benign": 1107590,
+      "tcp_udp_source_fp": 76,
+      "tcp_udp_target_fp": 11973,
+      "tcp_udp_source_fpr": 0.0002250991472888881,
+      "tcp_udp_target_fpr": 0.010809956752950099,
+      "tcp_udp_source_standardized_target_fpr": 0.01016531341620149
+    },
+    {
+      "record_type": "reference_sensitivity",
+      "row_kind": "seed",
+      "seed": 3407,
+      "rule": "T2_alpha_0.001",
+      "source_fpr": 0.0007341600528121586,
+      "target_fpr": 0.011605070362054017,
+      "delta_fpr": 0.010870910309241859,
+      "composition_source_rates": 7.065689009926191e-05,
+      "within_target_weights": 0.01057020888071576,
+      "composition_target_rates": 0.0007057128156765792,
+      "within_source_weights": 0.009935152955138441,
+      "unsupported_target": 0.00023004453842691034,
+      "within_target_weights_share_delta": 0.9723388915948963,
+      "within_source_weights_share_delta": 0.9139209755683582,
+      "source_standardized_target_fpr_all_source_supported": 0.010669313007950461,
+      "tcp_udp_source_n_benign": 337629,
+      "tcp_udp_target_n_benign": 1107590,
+      "tcp_udp_source_fp": 76,
+      "tcp_udp_target_fp": 11973,
+      "tcp_udp_source_fpr": 0.0002250991472888881,
+      "tcp_udp_target_fpr": 0.010809956752950099,
+      "tcp_udp_source_standardized_target_fpr": 0.01016531341620149
+    }
+  ],
+  "reference_summary": {
+    "T0": {
+      "source_fpr": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "target_fpr": {
+        "mean": 0.000432423589879604,
+        "sample_sd": 0.00015653111522180734
+      },
+      "delta_fpr": {
+        "mean": 0.000432423589879604,
+        "sample_sd": 0.00015653111522180734
+      },
+      "composition_source_rates": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "within_target_weights": {
+        "mean": 0.000292592595933817,
+        "sample_sd": 3.542916108401777e-05
+      },
+      "composition_target_rates": {
+        "mean": 1.4573428746140674e-05,
+        "sample_sd": 1.9587638945759776e-06
+      },
+      "within_source_weights": {
+        "mean": 0.00027801916718767626,
+        "sample_sd": 3.347040189005297e-05
+      },
+      "unsupported_target": {
+        "mean": 0.00013983099394576903,
+        "sample_sd": 0.00012113834980432864
+      },
+      "within_target_weights_share_delta": {
+        "mean": 0.7325404340894618,
+        "sample_sd": 0.2316668544498483
+      },
+      "within_source_weights_share_delta": {
+        "mean": 0.696207854506567,
+        "sample_sd": 0.22076494457115653
+      },
+      "source_standardized_target_fpr_all_source_supported": {
+        "mean": 0.00027801916718767626,
+        "sample_sd": 3.347040189005297e-05
+      },
+      "tcp_udp_source_n_benign": {
+        "mean": 337629.0,
+        "sample_sd": 0.0
+      },
+      "tcp_udp_target_n_benign": {
+        "mean": 1107590.0,
+        "sample_sd": 0.0
+      },
+      "tcp_udp_source_fp": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "tcp_udp_target_fp": {
+        "mean": 324.3333333333333,
+        "sample_sd": 39.272551907577046
+      },
+      "tcp_udp_source_fpr": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "tcp_udp_target_fpr": {
+        "mean": 0.00029282797184276973,
+        "sample_sd": 3.545766204784897e-05
+      },
+      "tcp_udp_source_standardized_target_fpr": {
+        "mean": 0.00027816079985772623,
+        "sample_sd": 3.348745288130402e-05
+      },
+      "ratio_of_mean_within_target_to_mean_delta": 0.6766342141863283,
+      "ratio_of_mean_within_source_to_mean_delta": 0.6429324710640387
+    },
+    "T1_alpha_0.001": {
+      "source_fpr": {
+        "mean": 0.0008259300594136784,
+        "sample_sd": 0.00014631902636472234
+      },
+      "target_fpr": {
+        "mean": 0.011681751874862987,
+        "sample_sd": 0.00012970373728535587
+      },
+      "delta_fpr": {
+        "mean": 0.010855821815449309,
+        "sample_sd": 1.7367008927493207e-05
+      },
+      "composition_source_rates": {
+        "mean": 6.961908367071514e-05,
+        "sample_sd": 2.4293009483891657e-06
+      },
+      "within_target_weights": {
+        "mean": 0.010556158193351711,
+        "sample_sd": 1.5244313528792582e-05
+      },
+      "composition_target_rates": {
+        "mean": 0.0007026700237978325,
+        "sample_sd": 5.211894394797754e-06
+      },
+      "within_source_weights": {
+        "mean": 0.009923107253224595,
+        "sample_sd": 1.2531146680624468e-05
+      },
+      "unsupported_target": {
+        "mean": 0.00023004453842691034,
+        "sample_sd": 0.0
+      },
+      "within_target_weights_share_delta": {
+        "mean": 0.9723962100806708,
+        "sample_sd": 0.00018572298105351434
+      },
+      "within_source_weights_share_delta": {
+        "mean": 0.9140819651735645,
+        "sample_sd": 0.000352712180641262
+      },
+      "source_standardized_target_fpr_all_source_supported": {
+        "mean": 0.010749037312638156,
+        "sample_sd": 0.00013491549328801045
+      },
+      "tcp_udp_source_n_benign": {
+        "mean": 337629.0,
+        "sample_sd": 0.0
+      },
+      "tcp_udp_target_n_benign": {
+        "mean": 1107590.0,
+        "sample_sd": 0.0
+      },
+      "tcp_udp_source_fp": {
+        "mean": 107.0,
+        "sample_sd": 49.42671342502959
+      },
+      "tcp_udp_target_fp": {
+        "mean": 12058.0,
+        "sample_sd": 143.77412840980813
+      },
+      "tcp_udp_source_fpr": {
+        "mean": 0.0003169159047356714,
+        "sample_sd": 0.00014639356638508418
+      },
+      "tcp_udp_target_fpr": {
+        "mean": 0.010886699952148358,
+        "sample_sd": 0.00012980807736599992
+      },
+      "tcp_udp_source_standardized_target_fpr": {
+        "mean": 0.010245078335233353,
+        "sample_sd": 0.0001349842239505002
+      },
+      "ratio_of_mean_within_target_to_mean_delta": 0.9723960445195281,
+      "ratio_of_mean_within_source_to_mean_delta": 0.9140816256861056
+    },
+    "T2_alpha_0.001": {
+      "source_fpr": {
+        "mean": 0.0007904061858905095,
+        "sample_sd": 8.492567095882522e-05
+      },
+      "target_fpr": {
+        "mean": 0.011642358627106225,
+        "sample_sd": 6.14865588452767e-05
+      },
+      "delta_fpr": {
+        "mean": 0.010851952441215715,
+        "sample_sd": 2.3809594478461546e-05
+      },
+      "composition_source_rates": {
+        "mean": 7.02716891949623e-05,
+        "sample_sd": 1.320839791379483e-06
+      },
+      "within_target_weights": {
+        "mean": 0.01055163621359386,
+        "sample_sd": 2.266300710704792e-05
+      },
+      "composition_target_rates": {
+        "mean": 0.0007034072568432412,
+        "sample_sd": 3.935004798407704e-06
+      },
+      "within_source_weights": {
+        "mean": 0.009918500645945579,
+        "sample_sd": 1.9996951404701867e-05
+      },
+      "unsupported_target": {
+        "mean": 0.00023004453842691034,
+        "sample_sd": 0.0
+      },
+      "within_target_weights_share_delta": {
+        "mean": 0.9723261319805246,
+        "sample_sd": 7.467138791299891e-05
+      },
+      "within_source_weights_share_delta": {
+        "mean": 0.9139832959530784,
+        "sample_sd": 0.00018407331347300706
+      },
+      "source_standardized_target_fpr_all_source_supported": {
+        "mean": 0.010708906831835986,
+        "sample_sd": 6.542076616582515e-05
+      },
+      "tcp_udp_source_n_benign": {
+        "mean": 337629.0,
+        "sample_sd": 0.0
+      },
+      "tcp_udp_target_n_benign": {
+        "mean": 1107590.0,
+        "sample_sd": 0.0
+      },
+      "tcp_udp_source_fp": {
+        "mean": 95.0,
+        "sample_sd": 28.687976575562104
+      },
+      "tcp_udp_target_fp": {
+        "mean": 12014.333333333334,
+        "sample_sd": 68.15668223537097
+      },
+      "tcp_udp_source_fpr": {
+        "mean": 0.00028137393411111015,
+        "sample_sd": 8.496893506056089e-05
+      },
+      "tcp_udp_target_fpr": {
+        "mean": 0.010847275014521018,
+        "sample_sd": 6.153602166448908e-05
+      },
+      "tcp_udp_source_standardized_target_fpr": {
+        "mean": 0.010204927410563216,
+        "sample_sd": 6.545409378809861e-05
+      },
+      "ratio_of_mean_within_target_to_mean_delta": 0.9723260648948981,
+      "ratio_of_mean_within_source_to_mean_delta": 0.9139830550929355
+    }
+  },
+  "t1_t2_comparisons": [
+    {
+      "seed": 42,
+      "t2_equals_t1": true,
+      "t2_fewer_fp_than_t1": 0,
+      "t2_fewer_tp_than_t1": 0
+    },
+    {
+      "seed": 2026,
+      "t2_equals_t1": false,
+      "t2_fewer_fp_than_t1": 131,
+      "t2_fewer_tp_than_t1": 0
+    },
+    {
+      "seed": 3407,
+      "t2_equals_t1": true,
+      "t2_fewer_fp_than_t1": 0,
+      "t2_fewer_tp_than_t1": 0
+    }
+  ]
+}

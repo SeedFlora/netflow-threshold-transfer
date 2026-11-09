@@ -1,0 +1,42 @@
+profile: main
+data_path: f7546561558c07c5_NFV3DATA-A11964_A11964.zip
+chunk_size: 100000
+split_seed: 42
+session_idle_seconds: 60
+embargo_seconds: 60
+capture_train_fraction: 0.7
+development_fraction: 0.2
+train_budget: 200000
+seeds: [42, 2026, 3407]
+protocols: [P_capture, P_random]
+feature_sets: [F0, F1]
+models: [lr, xgboost]
+support_models: [dummy, rf]
+cpu_threads: 4
+device: cuda
+per_run_timeout_seconds: 2400
+total_compute_budget_seconds: 21600
+ram_fraction_available: 0.65
+gpu_memory_limit_mb: 6144
+inference_batch_size: 4096
+benchmark_repeats: 5
+lr:
+  C: 1.0
+  max_iter: 1500
+  tol: 0.00001
+xgboost:
+  n_estimators: 300
+  max_depth: 6
+  max_bin: 256
+  learning_rate: 0.1
+  early_stopping_rounds: 30
+rf:
+  n_estimators: 200
+  max_depth: 20
+  min_samples_leaf: 2
+evaluation:
+  alphas: [0.001, 0.01]
+  n_blocks: 4
+  min_block_size: 10000
+  bootstrap_resamples: 500
+  window_minutes: 30

@@ -1,0 +1,359 @@
+{
+  "attack_subnet": "175.45.176.0/24",
+  "per_capture_all_rows": {
+    "A": {
+      "attack_flows": 17462,
+      "attack_flows_with_subnet": 17462,
+      "attack_flows_subnet_as_source": 17462,
+      "attack_first_start_utc": "2015-01-22 11:50:13",
+      "attack_last_start_utc": "2015-01-22 13:47:28",
+      "benign_flows_with_subnet": 3773,
+      "benign_subnet_first_start_utc": "2015-01-22 12:00:03",
+      "benign_subnet_last_start_utc": "2015-01-22 13:47:22"
+    },
+    "B": {
+      "attack_flows": 110231,
+      "attack_flows_with_subnet": 110231,
+      "attack_flows_subnet_as_source": 110231,
+      "attack_first_start_utc": "2015-02-18 00:23:27",
+      "attack_last_start_utc": "2015-02-18 12:29:24",
+      "benign_flows_with_subnet": 23047,
+      "benign_subnet_first_start_utc": "2015-02-18 00:23:27",
+      "benign_subnet_last_start_utc": "2015-02-18 12:29:20"
+    }
+  },
+  "calibration_benign": 337801,
+  "calibration_benign_with_subnet": 0,
+  "target_benign": 1108481,
+  "target_benign_with_subnet": 11687,
+  "target_benign_with_subnet_share": 0.010543256943510985,
+  "target_benign_subnet_as_destination": 11687,
+  "target_benign_subnet_port53_share": 0.975870625481304,
+  "target_benign_subnet_dns_l7_share": 0.9847694018995465,
+  "target_benign_subnet_min_ttl0_share": 0.9838281851630016,
+  "target_benign_other_min_ttl_mode": 31.0,
+  "target_attack_with_subnet_share": 1.0,
+  "nan_udp_cohort_calibration": {
+    "flows": 41,
+    "with_subnet": 0,
+    "port53_share": 0.36585365853658536,
+    "endpoint_pairs": 39
+  },
+  "nan_udp_cohort_target": {
+    "flows": 11560,
+    "with_subnet": 11499,
+    "port53_share": 0.9860726643598616,
+    "endpoint_pairs": 32
+  },
+  "per_model_seed": [
+    {
+      "model": "lr",
+      "feature_set": "F0",
+      "seed": 42,
+      "fp": 1615,
+      "fp_subnet": 114,
+      "fp_subnet_share": 0.07058823529411765,
+      "subnet_flows_flagged": 114,
+      "subnet_flows": 11687,
+      "rho_t": 1.456948743370432,
+      "rho_t_without_subnet": 1.3685341094134358
+    },
+    {
+      "model": "lr",
+      "feature_set": "F0",
+      "seed": 2026,
+      "fp": 1631,
+      "fp_subnet": 114,
+      "fp_subnet_share": 0.06989576946658492,
+      "subnet_flows_flagged": 114,
+      "subnet_flows": 11687,
+      "rho_t": 1.4713829104874145,
+      "rho_t_without_subnet": 1.3831220812659442
+    },
+    {
+      "model": "lr",
+      "feature_set": "F0",
+      "seed": 3407,
+      "fp": 1645,
+      "fp_subnet": 115,
+      "fp_subnet_share": 0.06990881458966565,
+      "subnet_flows_flagged": 115,
+      "subnet_flows": 11687,
+      "rho_t": 1.4840128067147744,
+      "rho_t_without_subnet": 1.394974808396107
+    },
+    {
+      "model": "lr",
+      "feature_set": "F1",
+      "seed": 42,
+      "fp": 1765,
+      "fp_subnet": 149,
+      "fp_subnet_share": 0.08441926345609065,
+      "subnet_flows_flagged": 149,
+      "subnet_flows": 11687,
+      "rho_t": 1.592269060092144,
+      "rho_t_without_subnet": 1.4733851571033394
+    },
+    {
+      "model": "lr",
+      "feature_set": "F1",
+      "seed": 2026,
+      "fp": 1810,
+      "fp_subnet": 180,
+      "fp_subnet_share": 0.09944751381215469,
+      "subnet_flows_flagged": 180,
+      "subnet_flows": 11687,
+      "rho_t": 1.6328651551086577,
+      "rho_t_without_subnet": 1.486149632474284
+    },
+    {
+      "model": "lr",
+      "feature_set": "F1",
+      "seed": 3407,
+      "fp": 1751,
+      "fp_subnet": 141,
+      "fp_subnet_share": 0.08052541404911479,
+      "subnet_flows_flagged": 141,
+      "subnet_flows": 11687,
+      "rho_t": 1.5796391638647842,
+      "rho_t_without_subnet": 1.4679146676586488
+    },
+    {
+      "model": "xgboost",
+      "feature_set": "F0",
+      "seed": 42,
+      "fp": 13181,
+      "fp_subnet": 11646,
+      "fp_subnet_share": 0.8835444958652606,
+      "subnet_flows_flagged": 11646,
+      "subnet_flows": 11687,
+      "rho_t": 11.891047298059235,
+      "rho_t_without_subnet": 1.399533549600016
+    },
+    {
+      "model": "xgboost",
+      "feature_set": "F0",
+      "seed": 2026,
+      "fp": 13100,
+      "fp_subnet": 11614,
+      "fp_subnet_share": 0.8865648854961832,
+      "subnet_flows_flagged": 11614,
+      "subnet_flows": 11687,
+      "rho_t": 11.81797432702951,
+      "rho_t_without_subnet": 1.3548578858017095
+    },
+    {
+      "model": "xgboost",
+      "feature_set": "F0",
+      "seed": 3407,
+      "fp": 12867,
+      "fp_subnet": 11681,
+      "fp_subnet_share": 0.907826222118598,
+      "subnet_flows_flagged": 11681,
+      "subnet_flows": 11687,
+      "rho_t": 11.607776768388451,
+      "rho_t_without_subnet": 1.0813334135671786
+    },
+    {
+      "model": "xgboost",
+      "feature_set": "F1",
+      "seed": 42,
+      "fp": 12868,
+      "fp_subnet": 11681,
+      "fp_subnet_share": 0.9077556729872552,
+      "subnet_flows_flagged": 11681,
+      "subnet_flows": 11687,
+      "rho_t": 11.608678903833264,
+      "rho_t_without_subnet": 1.0822451618079603
+    },
+    {
+      "model": "xgboost",
+      "feature_set": "F1",
+      "seed": 2026,
+      "fp": 13115,
+      "fp_subnet": 11615,
+      "fp_subnet_share": 0.8856271444910407,
+      "subnet_flows_flagged": 11615,
+      "subnet_flows": 11687,
+      "rho_t": 11.831506358701683,
+      "rho_t_without_subnet": 1.3676223611726541
+    },
+    {
+      "model": "xgboost",
+      "feature_set": "F1",
+      "seed": 3407,
+      "fp": 12864,
+      "fp_subnet": 11681,
+      "fp_subnet_share": 0.9080379353233831,
+      "subnet_flows_flagged": 11681,
+      "subnet_flows": 11687,
+      "rho_t": 11.605070362054017,
+      "rho_t_without_subnet": 1.0785981688448332
+    },
+    {
+      "model": "rf",
+      "feature_set": "F1",
+      "seed": 42,
+      "fp": 12449,
+      "fp_subnet": 11687,
+      "fp_subnet_share": 0.9387902642782553,
+      "subnet_flows_flagged": 11687,
+      "subnet_flows": 11687,
+      "rho_t": 11.230684152457282,
+      "rho_t_without_subnet": 0.6947521594757083
+    },
+    {
+      "model": "rf",
+      "feature_set": "F1",
+      "seed": 2026,
+      "fp": 12941,
+      "fp_subnet": 11687,
+      "fp_subnet_share": 0.9030986786183448,
+      "subnet_flows_flagged": 11687,
+      "subnet_flows": 11687,
+      "rho_t": 11.674534791304495,
+      "rho_t_without_subnet": 1.1433322939403388
+    },
+    {
+      "model": "rf",
+      "feature_set": "F1",
+      "seed": 3407,
+      "fp": 12499,
+      "fp_subnet": 11687,
+      "fp_subnet_share": 0.9350348027842227,
+      "subnet_flows_flagged": 11687,
+      "subnet_flows": 11687,
+      "rho_t": 11.275790924697851,
+      "rho_t_without_subnet": 0.7403395715147968
+    }
+  ],
+  "per_model_mean": [
+    {
+      "model": "lr",
+      "feature_set": "F0",
+      "fp_subnet_share_min": 0.06989576946658492,
+      "fp_subnet_share_max": 0.07058823529411765,
+      "subnet_flagged_min": 114,
+      "subnet_flagged_max": 115,
+      "rho_t_mean": 1.4707814868575404,
+      "rho_t_without_subnet_mean": 1.3822103330251625
+    },
+    {
+      "model": "lr",
+      "feature_set": "F1",
+      "fp_subnet_share_min": 0.08052541404911479,
+      "fp_subnet_share_max": 0.09944751381215469,
+      "subnet_flagged_min": 141,
+      "subnet_flagged_max": 180,
+      "rho_t_mean": 1.6015911263551954,
+      "rho_t_without_subnet_mean": 1.4758164857454241
+    },
+    {
+      "model": "rf",
+      "feature_set": "F1",
+      "fp_subnet_share_min": 0.9030986786183448,
+      "fp_subnet_share_max": 0.9387902642782553,
+      "subnet_flagged_min": 11687,
+      "subnet_flagged_max": 11687,
+      "rho_t_mean": 11.393669956153209,
+      "rho_t_without_subnet_mean": 0.8594746749769481
+    },
+    {
+      "model": "xgboost",
+      "feature_set": "F0",
+      "fp_subnet_share_min": 0.8835444958652606,
+      "fp_subnet_share_max": 0.907826222118598,
+      "subnet_flagged_min": 11614,
+      "subnet_flagged_max": 11681,
+      "rho_t_mean": 11.772266131159066,
+      "rho_t_without_subnet_mean": 1.2785749496563013
+    },
+    {
+      "model": "xgboost",
+      "feature_set": "F1",
+      "fp_subnet_share_min": 0.8856271444910407,
+      "fp_subnet_share_max": 0.9080379353233831,
+      "subnet_flagged_min": 11615,
+      "subnet_flagged_max": 11681,
+      "rho_t_mean": 11.681751874862988,
+      "rho_t_without_subnet_mean": 1.1761552306084824
+    }
+  ],
+  "host_role_decomposition_xgb_f1": [
+    {
+      "seed": 42,
+      "delta_fpr": 0.010859717237053118,
+      "composition": -7.896495293703338e-06,
+      "within": 0.0003297696015047051,
+      "unsupported_target": 0.010537844130842118,
+      "unsupported_share": 0.9703608207115397
+    },
+    {
+      "seed": 2026,
+      "delta_fpr": 0.010836837900052953,
+      "composition": -1.048704513313961e-05,
+      "within": 0.0003690217537015282,
+      "unsupported_target": 0.010478303191484564,
+      "unsupported_share": 0.9669151913247095
+    },
+    {
+      "seed": 3407,
+      "delta_fpr": 0.010870910309241859,
+      "composition": -7.740438074460188e-06,
+      "within": 0.0003408066164742032,
+      "unsupported_target": 0.010537844130842118,
+      "unsupported_share": 0.9693617030289923
+    }
+  ],
+  "host_role_decomposition_xgb_f1_mean": {
+    "delta_fpr": 0.010855821815449309,
+    "composition": -8.707992833767712e-06,
+    "within": 0.0003465326572268121,
+    "unsupported_target": 0.010517997151056266,
+    "unsupported_share_ratio_of_means": 0.9688807839575745
+  },
+  "protocol_within_share": {
+    "target_weights": 0.9723960445195281,
+    "source_weights": 0.9140816256861056,
+    "symmetric": 0.9432388351028169
+  },
+  "window_corr_subnet_benign_vs_attack": 0.6439555884515803,
+  "queue_xgb_f1_t1": {
+    "benign_per_hour": 1070.2323876182413,
+    "attack_per_hour": 9109.551840819036,
+    "total_per_hour": 10179.784228437278,
+    "benign_share": 0.10513311123319703
+  },
+  "input_hashes": {
+    "runs\\main_P_capture_lr_F0_42_dca626e4a7\\predictions.parquet": "2265a4655786a74d2cb07a4c1b854d1702e5ebca02b1e4669b4557c2cfc59e12",
+    "runs\\main_P_capture_lr_F0_42_dca626e4a7\\thresholds.json": "d27beefdd51c7d869c0918c053f437c8bb29d5f64f50751999ecc50893efd027",
+    "runs\\main_P_capture_lr_F0_2026_dca626e4a7\\predictions.parquet": "fab99e5687358684f6a1f44263e0c29b3a72a16f97cc18ac3215ad7710bbe097",
+    "runs\\main_P_capture_lr_F0_2026_dca626e4a7\\thresholds.json": "97e097ced5132a4be374f0e303f1a0376a16a9e3d4e4208ff9a06ad1a147033f",
+    "runs\\main_P_capture_lr_F0_3407_dca626e4a7\\predictions.parquet": "fbc4593ea70c59b8ea148203d36d457d81723a0fba3107df599c5ea7aae723d3",
+    "runs\\main_P_capture_lr_F0_3407_dca626e4a7\\thresholds.json": "439124dfd2394788ea77296d20c2f5e0aff3061d9e25104614ac9bd07dcc6437",
+    "runs\\main_P_capture_lr_F1_42_dca626e4a7\\predictions.parquet": "41d5d39e435734d2198df67ccd92af8f2559bc99b716011b98d11906b6d0c218",
+    "runs\\main_P_capture_lr_F1_42_dca626e4a7\\thresholds.json": "38f5c092791459bf4ee755e5fcbd6b7eb94b867c7a26c0d2ab74bc5aecbe243c",
+    "runs\\main_P_capture_lr_F1_2026_dca626e4a7\\predictions.parquet": "31ed21f12b4e0c62b5703b16f46976e190366a61a3c7fe9fa283cc261c09348c",
+    "runs\\main_P_capture_lr_F1_2026_dca626e4a7\\thresholds.json": "f5f0b70dfece8e985c5bed1cdf4a382a9ace3925a36d47f01815436a6e05562d",
+    "runs\\main_P_capture_lr_F1_3407_dca626e4a7\\predictions.parquet": "3ffca67330ae315735c294bee568e59c1cebc028f19980ef66a56c3ae3f00303",
+    "runs\\main_P_capture_lr_F1_3407_dca626e4a7\\thresholds.json": "e2b8cac97421199e0a2b1186a40e081bed4cd274402f80fdb2ec8c7032c347a6",
+    "runs\\main_P_capture_xgboost_F0_42_dca626e4a7\\predictions.parquet": "b434a2e0f2c7ee3a241efe3beb6a7811d637d21d62e44ebe57d263fdfb395a27",
+    "runs\\main_P_capture_xgboost_F0_42_dca626e4a7\\thresholds.json": "955abcb815706848a5e118eaa6c1e3a8d2d1ffbb2ca0b9e209543622be3daf3c",
+    "runs\\main_P_capture_xgboost_F0_2026_dca626e4a7\\predictions.parquet": "e3d50e43b9f1f7b703b4c003be42933d3fe73b0d420f43eaa05df9aeaa843f42",
+    "runs\\main_P_capture_xgboost_F0_2026_dca626e4a7\\thresholds.json": "702b6613844ddd572368163f047ed6350e73006a48f0b902aa5ea6aac858d213",
+    "runs\\main_P_capture_xgboost_F0_3407_dca626e4a7\\predictions.parquet": "9ec72c6be79e06c262bf19443d9c5ec7b6d17641fb6bf626baaf109732f0e70c",
+    "runs\\main_P_capture_xgboost_F0_3407_dca626e4a7\\thresholds.json": "e8d31e3733177f94bafcd3f37a66d7023d9e5118c99a03853fe55107986b4c36",
+    "runs\\main_P_capture_xgboost_F1_42_dca626e4a7\\predictions.parquet": "dee9cbc47a6c772dfecb8f11090e4b1dd97fa25228a3cee10f19f8285953037e",
+    "runs\\main_P_capture_xgboost_F1_42_dca626e4a7\\thresholds.json": "ae94a541438a44b7c135c99883e420d5868528025e07f61abd2b618fd00dd1f7",
+    "runs\\main_P_capture_xgboost_F1_2026_dca626e4a7\\predictions.parquet": "c150307637c03f106f80459182905ca0ed340576b18d6d83b557457d00a050f0",
+    "runs\\main_P_capture_xgboost_F1_2026_dca626e4a7\\thresholds.json": "125d50d7cb7c18c085ab666b3c11dc302ee8f9387f46614e939d0beac31873ef",
+    "runs\\main_P_capture_xgboost_F1_3407_dca626e4a7\\predictions.parquet": "580c98e09d44c12be7c1217df7fb100d00c30185b9a9d458e9767c6f45c81e0a",
+    "runs\\main_P_capture_xgboost_F1_3407_dca626e4a7\\thresholds.json": "a2eb8063418538241b43e4fc41d423a178ac1d32bd2f0e9db1a6566c5a465043",
+    "runs\\main_P_capture_rf_F1_42_dca626e4a7\\predictions.parquet": "adcd90858882f8390854062cc398084767b2637442eaad257c2128bf4b9338ed",
+    "runs\\main_P_capture_rf_F1_42_dca626e4a7\\thresholds.json": "730b27f490fd45bb48b61fd2088666b000ee4493e71d8542533d04e7754c041b",
+    "runs\\main_P_capture_rf_F1_2026_dca626e4a7\\predictions.parquet": "6e60bc04f3f0764ad0fa3b31fd1bf6e1a95b567f329b977e9632e952cfc726e8",
+    "runs\\main_P_capture_rf_F1_2026_dca626e4a7\\thresholds.json": "d35cddc2082fdadf4cf4700f686f712222f929275a90be4d36bddae49c3da4a9",
+    "runs\\main_P_capture_rf_F1_3407_dca626e4a7\\predictions.parquet": "4c089eb6de02af97c66b141069524be8534abf4a394f03aa0404ba79fabdaf38",
+    "runs\\main_P_capture_rf_F1_3407_dca626e4a7\\thresholds.json": "d994c54063ae5447b2829d093183a5130deffc4452f92b8bd24ef10d12d26629"
+  }
+}

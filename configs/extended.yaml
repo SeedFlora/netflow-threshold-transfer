@@ -1,0 +1,6 @@
+# Optional larger training budget; separate profile. Never substituted for main.
+extends: main.yaml
+profile: extended
+train_budget: 500000
+support_models: []
+total_compute_budget_seconds: 21600

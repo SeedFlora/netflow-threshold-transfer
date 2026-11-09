@@ -1,0 +1,204 @@
+{
+  "representative_seed_note": "Seed 42 is an illustration; all three seeds are reported and none was selected for model decisions.",
+  "core_capture_budget_violations": 41,
+  "core_capture_operating_points": 48,
+  "violations_by_rule_alpha": [
+    {
+      "rule": "T1",
+      "alpha": 0.001,
+      "sum": 12,
+      "count": 12
+    },
+    {
+      "rule": "T1",
+      "alpha": 0.01,
+      "sum": 11,
+      "count": 12
+    },
+    {
+      "rule": "T2",
+      "alpha": 0.001,
+      "sum": 12,
+      "count": 12
+    },
+    {
+      "rule": "T2",
+      "alpha": 0.01,
+      "sum": 6,
+      "count": 12
+    }
+  ],
+  "T2_pairs": 24,
+  "T2_threshold_identical_to_T1": 7,
+  "T2_target_fpr_reduced_pairs": 16,
+  "T2_max_recall_loss": 7.258276703658861e-05,
+  "max_sampled_process_tree_rss_bytes": 1821523968,
+  "max_sampled_gpu_device_used_mb": 387.0,
+  "total_main_worker_seconds": 401.1319938000015,
+  "training_warnings": {},
+  "representative_xgb_F1_T1_0_001_intervals": [
+    {
+      "metric": "delta_fpr",
+      "estimate": 0.0108597172370531,
+      "lower_95": 0.0064833177696836,
+      "upper_95": 0.0146360478239516,
+      "valid_resamples": 500,
+      "requested_resamples": 500,
+      "reason": null,
+      "threshold_id": "T1_alpha_0.001"
+    },
+    {
+      "metric": "delta_recall",
+      "estimate": null,
+      "lower_95": null,
+      "upper_95": null,
+      "valid_resamples": 0,
+      "requested_resamples": 500,
+      "reason": "Undefined support in every resample",
+      "threshold_id": "T1_alpha_0.001"
+    },
+    {
+      "metric": "test_fpr",
+      "estimate": 0.0116086789038332,
+      "lower_95": 0.0072590008265357,
+      "upper_95": 0.0153535053033002,
+      "valid_resamples": 500,
+      "requested_resamples": 500,
+      "reason": null,
+      "threshold_id": "T1_alpha_0.001"
+    },
+    {
+      "metric": "test_recall",
+      "estimate": 1.0,
+      "lower_95": 1.0,
+      "upper_95": 1.0,
+      "valid_resamples": 500,
+      "requested_resamples": 500,
+      "reason": null,
+      "threshold_id": "T1_alpha_0.001"
+    },
+    {
+      "metric": "composition",
+      "estimate": 7.135710789446683e-05,
+      "lower_95": 1.4726290576332296e-05,
+      "upper_95": 0.0001669255259594,
+      "valid_resamples": 500,
+      "requested_resamples": 500,
+      "reason": null,
+      "threshold_id": "T1_alpha_0.001"
+    },
+    {
+      "metric": "within_stratum",
+      "estimate": 0.0105583155907317,
+      "lower_95": 0.0062140543702468,
+      "upper_95": 0.0143483330335289,
+      "valid_resamples": 500,
+      "requested_resamples": 500,
+      "reason": null,
+      "threshold_id": "T1_alpha_0.001"
+    },
+    {
+      "metric": "unsupported_target",
+      "estimate": 0.0002300445384269,
+      "lower_95": 0.0002224344332583,
+      "upper_95": 0.0002393276685491,
+      "valid_resamples": 500,
+      "requested_resamples": 500,
+      "reason": null,
+      "threshold_id": "T1_alpha_0.001"
+    }
+  ],
+  "representative_protocol_decomposition": [
+    {
+      "stratum": "TCP",
+      "source_n_benign": 263290,
+      "target_n_benign": 848104,
+      "source_fp": 35,
+      "target_fp": 88,
+      "source_weight": 0.7794233883262631,
+      "target_weight": 0.7651046792863387,
+      "source_fpr": 0.0001329332674997,
+      "target_fpr": 0.0001037608595172,
+      "composition": -1.903432779054857e-06,
+      "within_stratum": -2.231994585345028e-05,
+      "unsupported_target": 0.0,
+      "threshold_id": "T1_alpha_0.001"
+    },
+    {
+      "stratum": "UDP",
+      "source_n_benign": 74339,
+      "target_n_benign": 259486,
+      "source_fp": 46,
+      "target_fp": 11889,
+      "source_weight": 0.2200674361532381,
+      "target_weight": 0.2340915180323343,
+      "source_fpr": 0.0006187869086213,
+      "target_fpr": 0.0458175007514856,
+      "composition": 8.677918272218139e-06,
+      "within_stratum": 0.0105806355365851,
+      "unsupported_target": 0.0,
+      "threshold_id": "T1_alpha_0.001"
+    },
+    {
+      "stratum": "ICMP",
+      "source_n_benign": 0,
+      "target_n_benign": 255,
+      "source_fp": 0,
+      "target_fp": 255,
+      "source_weight": 0.0,
+      "target_weight": 0.0002300445384269,
+      "source_fpr": null,
+      "target_fpr": 1.0,
+      "composition": 0.0,
+      "within_stratum": 0.0,
+      "unsupported_target": 0.0002300445384269,
+      "threshold_id": "T1_alpha_0.001"
+    },
+    {
+      "stratum": "Other",
+      "source_n_benign": 172,
+      "target_n_benign": 636,
+      "source_fp": 172,
+      "target_fp": 636,
+      "source_weight": 0.0005091755204987,
+      "target_weight": 0.0005737581429,
+      "source_fpr": 1.0,
+      "target_fpr": 1.0,
+      "composition": 6.458262240130355e-05,
+      "within_stratum": 0.0,
+      "unsupported_target": 0.0,
+      "threshold_id": "T1_alpha_0.001"
+    }
+  ],
+  "representative_window_min_benign": 9,
+  "random_T1_0_001_mean": [
+    {
+      "model": "lr",
+      "feature_set": "F0",
+      "fpr": 0.0010606675789610334,
+      "recall": 0.9976908298233945,
+      "average_precision": 0.9974661150559614
+    },
+    {
+      "model": "lr",
+      "feature_set": "F1",
+      "fpr": 0.0009844759570318666,
+      "recall": 0.9976908298233947,
+      "average_precision": 0.997617563725692
+    },
+    {
+      "model": "xgboost",
+      "feature_set": "F0",
+      "fpr": 0.0006145455821390334,
+      "recall": 1.0,
+      "average_precision": 0.9999986756014604
+    },
+    {
+      "model": "xgboost",
+      "feature_set": "F1",
+      "fpr": 0.0006015128047037666,
+      "recall": 1.0,
+      "average_precision": 0.9999984950928974
+    }
+  ]
+}

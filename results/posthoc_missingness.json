@@ -1,0 +1,179 @@
+{
+  "analysis": "Exploratory post-hoc association conditional on frozen predictions",
+  "protocol": "P_capture",
+  "model": "xgboost",
+  "feature_set": "F1",
+  "masks_equal_all_raw": true,
+  "masks_disagree_all_raw": 0,
+  "masks_disagree_integrity_valid": 0,
+  "raw_source_rate_negative_inf": 0,
+  "raw_destination_rate_nan": 0,
+  "raw_destination_rate_negative_inf": 0,
+  "population": "Benign source calibration and benign target test only",
+  "decision_rule": "score > stored threshold",
+  "interpretation": "Association, not a causal effect of missingness or median imputation; no refit or target-driven threshold selection.",
+  "runs": [
+    {
+      "run": "main_P_capture_xgboost_F1_2026_dca626e4a7",
+      "seed": 2026,
+      "joined_benign_rows": 1446282,
+      "calibration_benign": 337801,
+      "test_benign": 1108481
+    },
+    {
+      "run": "main_P_capture_xgboost_F1_3407_dca626e4a7",
+      "seed": 3407,
+      "joined_benign_rows": 1446282,
+      "calibration_benign": 337801,
+      "test_benign": 1108481
+    },
+    {
+      "run": "main_P_capture_xgboost_F1_42_dca626e4a7",
+      "seed": 42,
+      "joined_benign_rows": 1446282,
+      "calibration_benign": 337801,
+      "test_benign": 1108481
+    }
+  ],
+  "udp_binary_missingness_decomposition": [
+    {
+      "seed": 42,
+      "delta_udp_fpr": 0.04519871384286432,
+      "composition": 0.0005030555211638217,
+      "within_rate_condition": 0.0446956583217005,
+      "within_share_of_delta": 0.9888701363735101,
+      "composition_share_of_delta": 0.011129863626489912,
+      "within_by_condition": {
+        "finite": 0.0012187274000144985,
+        "nonfinite": 0.043476930921686
+      },
+      "composition_by_condition": {
+        "finite": -4.643818650306968e-06,
+        "nonfinite": 0.0005076993398141287
+      }
+    },
+    {
+      "seed": 2026,
+      "delta_udp_fpr": 0.044936657315729905,
+      "composition": 0.0005030555211638217,
+      "within_rate_condition": 0.04443360179456609,
+      "within_share_of_delta": 0.988805230490793,
+      "composition_share_of_delta": 0.011194769509207109,
+      "within_by_condition": {
+        "finite": 0.0009643784177958047,
+        "nonfinite": 0.04346922337677028
+      },
+      "composition_by_condition": {
+        "finite": -4.643818650306968e-06,
+        "nonfinite": 0.0005076993398141287
+      }
+    },
+    {
+      "seed": 3407,
+      "delta_udp_fpr": 0.04525252140013574,
+      "composition": 0.000494450305632168,
+      "within_rate_condition": 0.04475807109450357,
+      "within_share_of_delta": 0.9890735302623228,
+      "composition_share_of_delta": 0.010926469737677089,
+      "within_by_condition": {
+        "finite": 0.0012556002039803324,
+        "nonfinite": 0.04350247089052323
+      },
+      "composition_by_condition": {
+        "finite": -1.160954662576742e-06,
+        "nonfinite": 0.0004956112602947447
+      }
+    }
+  ],
+  "udp_binary_missingness_decomposition_summary": {
+    "delta_udp_fpr": 0.04512929751957665,
+    "composition": 0.0005001871159866038,
+    "within_rate_condition": 0.04462911040359006,
+    "within_share_of_delta": 0.9889162990422086,
+    "composition_share_of_delta": 0.011083700957791369,
+    "ratio_of_mean_composition_to_mean_delta": 0.011083423484924122
+  },
+  "udp_original_rate_state_decomposition": [
+    {
+      "seed": 42,
+      "delta_udp_fpr": 0.045198713842864315,
+      "composition": 0.0439988058075019,
+      "within_rate_condition": 0.0011999080353624172,
+      "within_share_of_delta": 0.026547393351367476,
+      "composition_share_of_delta": 0.9734526066486326,
+      "within_by_condition": {
+        "finite": 0.0012187274000144985,
+        "source_rate_nan": 0.0,
+        "source_rate_inf": -1.8819364652081406e-05
+      },
+      "composition_by_condition": {
+        "finite": -4.643818650306968e-06,
+        "source_rate_nan": 0.04399808215081798,
+        "source_rate_inf": 5.367475334226712e-06
+      }
+    },
+    {
+      "seed": 2026,
+      "delta_udp_fpr": 0.044936657315729905,
+      "composition": 0.0439988058075019,
+      "within_rate_condition": 0.0009378515082280076,
+      "within_share_of_delta": 0.020870522291824234,
+      "composition_share_of_delta": 0.9791294777081758,
+      "within_by_condition": {
+        "finite": 0.0009643784177958047,
+        "source_rate_nan": -7.707544915715641e-06,
+        "source_rate_inf": -1.8819364652081406e-05
+      },
+      "composition_by_condition": {
+        "finite": -4.643818650306968e-06,
+        "source_rate_nan": 0.04399808215081798,
+        "source_rate_inf": 5.367475334226712e-06
+      }
+    },
+    {
+      "seed": 3407,
+      "delta_udp_fpr": 0.045252521400135734,
+      "composition": 0.0439969211961554,
+      "within_rate_condition": 0.0012556002039803324,
+      "within_share_of_delta": 0.02774652472683138,
+      "composition_share_of_delta": 0.9722534752731685,
+      "within_by_condition": {
+        "finite": 0.0012556002039803324,
+        "source_rate_nan": 0.0,
+        "source_rate_inf": 0.0
+      },
+      "composition_by_condition": {
+        "finite": -1.160954662576742e-06,
+        "source_rate_nan": 0.04399808215081798,
+        "source_rate_inf": 0.0
+      }
+    }
+  ],
+  "udp_original_rate_state_decomposition_summary": {
+    "delta_udp_fpr": 0.04512929751957665,
+    "composition": 0.04399817760371973,
+    "within_rate_condition": 0.001131119915856919,
+    "within_share_of_delta": 0.025054813456674364,
+    "composition_share_of_delta": 0.9749451865433256,
+    "ratio_of_mean_composition_to_mean_delta": 0.974936017664218
+  },
+  "input_sha256": {
+    "data\\processed\\dataset.parquet": "ed210f795c4143dd4c2d1ed92ca811ee95e57e963583f793abd765c03c9f5931",
+    "runs\\main_P_capture_xgboost_F1_2026_dca626e4a7\\predictions.parquet": "c150307637c03f106f80459182905ca0ed340576b18d6d83b557457d00a050f0",
+    "runs\\main_P_capture_xgboost_F1_2026_dca626e4a7\\thresholds.json": "125d50d7cb7c18c085ab666b3c11dc302ee8f9387f46614e939d0beac31873ef",
+    "runs\\main_P_capture_xgboost_F1_2026_dca626e4a7\\pipeline.joblib": "4905fd71605e830b92b1f3273d68acdec54151e6f8fa511fa665cb4b47525da6",
+    "runs\\main_P_capture_xgboost_F1_2026_dca626e4a7\\job.json": "26320290e8f566c803acf567a8971b7ae6a753610039418c2ed69dfc46a87db2",
+    "runs\\main_P_capture_xgboost_F1_2026_dca626e4a7\\decomposition.csv": "fd1567f36e5378d269577e06f72daff80d1455facd455b343e79c5faffb993e4",
+    "runs\\main_P_capture_xgboost_F1_3407_dca626e4a7\\predictions.parquet": "580c98e09d44c12be7c1217df7fb100d00c30185b9a9d458e9767c6f45c81e0a",
+    "runs\\main_P_capture_xgboost_F1_3407_dca626e4a7\\thresholds.json": "a2eb8063418538241b43e4fc41d423a178ac1d32bd2f0e9db1a6566c5a465043",
+    "runs\\main_P_capture_xgboost_F1_3407_dca626e4a7\\pipeline.joblib": "72091b6c733dad218ce7fd6f5f942cab31ebd138930a20e11a48960de6299fed",
+    "runs\\main_P_capture_xgboost_F1_3407_dca626e4a7\\job.json": "dfd17d4608b262a41da78c9ad3faa92a8c72308ddf8f4592a1863b7bef997949",
+    "runs\\main_P_capture_xgboost_F1_3407_dca626e4a7\\decomposition.csv": "92273efcf8765ec1647745cd409db31d930349be20024764bfe0db05adb8dd79",
+    "runs\\main_P_capture_xgboost_F1_42_dca626e4a7\\predictions.parquet": "dee9cbc47a6c772dfecb8f11090e4b1dd97fa25228a3cee10f19f8285953037e",
+    "runs\\main_P_capture_xgboost_F1_42_dca626e4a7\\thresholds.json": "ae94a541438a44b7c135c99883e420d5868528025e07f61abd2b618fd00dd1f7",
+    "runs\\main_P_capture_xgboost_F1_42_dca626e4a7\\pipeline.joblib": "0e93805590204bcc4e1b48911510ee3b3de64aedf43f6dadb8ca18efb175bd4b",
+    "runs\\main_P_capture_xgboost_F1_42_dca626e4a7\\job.json": "752dffe1a2e95e07e63b5ede4cb77fb22e80a94925e45c6ce0de51f76b3766b8",
+    "runs\\main_P_capture_xgboost_F1_42_dca626e4a7\\decomposition.csv": "cfbf8c62e4ed5c29bbfd26aef9c88bce89295d45d0415249fd1e213a83cbeb75"
+  },
+  "input_hashes_unchanged_after_analysis": true
+}

@@ -1,0 +1,276 @@
+{
+  "seed": 42,
+  "cutoff_epoch_milliseconds": 1421959560173,
+  "cutoff_utc": "2015-01-22T20:46:00.173000+00:00",
+  "embargo_seconds": 60,
+  "purge_rule": "Exclude entire session group intersecting inclusive cutoff +/- embargo; exclude groups spanning captures.",
+  "cutoff_rule": "70% (configurable) ordered integrity-valid A rows; equal timestamps stay together.",
+  "grouping": "Bidirectional endpoint+port+protocol; 60 second idle from running interval end; heuristic, not PCAP sessions.",
+  "stratification": {
+    "P_capture": true,
+    "P_random_stages": [
+      true,
+      true,
+      true
+    ]
+  },
+  "random_ratio_unit": "session groups (60/10/15/15); observed row fractions below",
+  "prior_label_access": "User's prior descriptive audit inspected labels; full benchmark labels used for descriptive audit and diagnostic random stratification. Target is excluded from capture model selection/calibration.",
+  "total_rows": 2365424,
+  "integrity_excluded_rows": 14815,
+  "integrity_exclusions_by_reason": {
+    "duplicate_event": 14815
+  },
+  "purged_groups": 2794,
+  "P_capture_temporal_excluded_rows": 3470,
+  "partitions": {
+    "P_capture": {
+      "calibration": {
+        "rows": 337801,
+        "groups": 274988,
+        "label_counts": {
+          "0": 337801
+        },
+        "attack_counts": {
+          "Benign": 337801
+        },
+        "captures": {
+          "A": 337801
+        },
+        "start_min_ms": 1421959620174,
+        "start_max_ms": 1421972723759
+      },
+      "development": {
+        "rows": 157623,
+        "groups": 126602,
+        "label_counts": {
+          "0": 154369,
+          "1": 3254
+        },
+        "attack_counts": {
+          "Benign": 154369,
+          "Fuzzers": 1220,
+          "Exploits": 1130,
+          "Reconnaissance": 431,
+          "Generic": 234,
+          "DoS": 117,
+          "Shellcode": 56,
+          "Analysis": 54,
+          "Backdoor": 8,
+          "Worms": 4
+        },
+        "captures": {
+          "A": 157623
+        },
+        "start_min_ms": 1421927414036,
+        "start_max_ms": 1421959499372
+      },
+      "excluded": {
+        "rows": 18285,
+        "groups": 4389,
+        "label_counts": {
+          "0": 18271,
+          "1": 14
+        },
+        "attack_counts": {
+          "Benign": 18271,
+          "DoS": 9,
+          "Exploits": 4,
+          "Backdoor": 1
+        },
+        "captures": {
+          "B": 11372,
+          "A": 6913
+        },
+        "start_min_ms": 1421928003821,
+        "start_max_ms": 1424262560618
+      },
+      "test": {
+        "rows": 1218700,
+        "groups": 973965,
+        "label_counts": {
+          "0": 1108481,
+          "1": 110219
+        },
+        "attack_counts": {
+          "Benign": 1108481,
+          "Exploits": 37122,
+          "Fuzzers": 27770,
+          "Generic": 17246,
+          "Reconnaissance": 14919,
+          "DoS": 5349,
+          "Backdoor": 4615,
+          "Shellcode": 2101,
+          "Analysis": 959,
+          "Worms": 138
+        },
+        "captures": {
+          "B": 1218700
+        },
+        "start_min_ms": 1424219007658,
+        "start_max_ms": 1424262564927
+      },
+      "train": {
+        "rows": 633015,
+        "groups": 506407,
+        "label_counts": {
+          "0": 618809,
+          "1": 14206
+        },
+        "attack_counts": {
+          "Benign": 618809,
+          "Fuzzers": 4826,
+          "Exploits": 4492,
+          "Generic": 2171,
+          "Reconnaissance": 1724,
+          "DoS": 505,
+          "Shellcode": 224,
+          "Analysis": 213,
+          "Backdoor": 35,
+          "Worms": 16
+        },
+        "captures": {
+          "A": 633015
+        },
+        "start_min_ms": 1421927376907,
+        "start_max_ms": 1421959500072
+      }
+    },
+    "P_random": {
+      "calibration": {
+        "rows": 354149,
+        "groups": 282714,
+        "label_counts": {
+          "0": 334406,
+          "1": 19743
+        },
+        "attack_counts": {
+          "Benign": 334406,
+          "Exploits": 6427,
+          "Fuzzers": 5073,
+          "Generic": 3475,
+          "Reconnaissance": 2554,
+          "DoS": 889,
+          "Backdoor": 762,
+          "Shellcode": 354,
+          "Analysis": 185,
+          "Worms": 24
+        },
+        "captures": {
+          "B": 184247,
+          "A": 169902
+        },
+        "start_min_ms": 1421927376907,
+        "start_max_ms": 1424262564830
+      },
+      "development": {
+        "rows": 234185,
+        "groups": 188475,
+        "label_counts": {
+          "0": 222078,
+          "1": 12107
+        },
+        "attack_counts": {
+          "Benign": 222078,
+          "Exploits": 4245,
+          "Fuzzers": 3382,
+          "Reconnaissance": 1710,
+          "Generic": 1318,
+          "DoS": 596,
+          "Backdoor": 482,
+          "Shellcode": 236,
+          "Analysis": 122,
+          "Worms": 16
+        },
+        "captures": {
+          "B": 120895,
+          "A": 113290
+        },
+        "start_min_ms": 1421927414035,
+        "start_max_ms": 1424262564727
+      },
+      "excluded": {
+        "rows": 14815,
+        "groups": 1595,
+        "label_counts": {
+          "0": 14801,
+          "1": 14
+        },
+        "attack_counts": {
+          "Benign": 14801,
+          "DoS": 9,
+          "Exploits": 4,
+          "Backdoor": 1
+        },
+        "captures": {
+          "B": 11372,
+          "A": 3443
+        },
+        "start_min_ms": 1421928003821,
+        "start_max_ms": 1424262560618
+      },
+      "test": {
+        "rows": 350539,
+        "groups": 282714,
+        "label_counts": {
+          "0": 332495,
+          "1": 18044
+        },
+        "attack_counts": {
+          "Benign": 332495,
+          "Exploits": 6355,
+          "Fuzzers": 5083,
+          "Reconnaissance": 2558,
+          "Generic": 1777,
+          "DoS": 918,
+          "Backdoor": 788,
+          "Shellcode": 359,
+          "Analysis": 183,
+          "Worms": 23
+        },
+        "captures": {
+          "B": 181368,
+          "A": 169171
+        },
+        "start_min_ms": 1421927376907,
+        "start_max_ms": 1424262564927
+      },
+      "train": {
+        "rows": 1411736,
+        "groups": 1130853,
+        "label_counts": {
+          "0": 1333951,
+          "1": 77785
+        },
+        "attack_counts": {
+          "Benign": 1333951,
+          "Exploits": 25717,
+          "Fuzzers": 20278,
+          "Generic": 13081,
+          "Reconnaissance": 10252,
+          "DoS": 3568,
+          "Backdoor": 2626,
+          "Shellcode": 1432,
+          "Analysis": 736,
+          "Worms": 95
+        },
+        "captures": {
+          "B": 732190,
+          "A": 679546
+        },
+        "start_min_ms": 1421927381000,
+        "start_max_ms": 1424262564917
+      }
+    }
+  },
+  "split_config": {
+    "split_seed": 42,
+    "embargo_seconds": 60,
+    "session_idle_seconds": 60,
+    "capture_train_fraction": 0.7,
+    "development_fraction": 0.2
+  },
+  "split_sha256": "b89947dddc30a8d87dc969a31290b85c330798c2ae9eccd7817b20bd33dcf8bc",
+  "manifest_path": "G:\\network\\manifests\\split_manifest.parquet",
+  "dataset_csv_sha256": "4ebb97bd74412d566137d95a6fc3ffd8f374f1cf8cfe204d007848e7a668f9b5"
+}

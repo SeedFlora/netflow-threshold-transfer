@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nids-lab"
+version = "0.1.0"
+description = "Capture-aware, source-calibrated NetFlow evaluation"
+requires-python = ">=3.12"
+dependencies = ["numpy", "pandas", "pyarrow", "scikit-learn", "xgboost", "scipy", "pyyaml", "joblib", "psutil", "matplotlib"]
+
+[project.scripts]
+nids-lab = "nids_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
